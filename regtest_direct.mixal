@@ -1,0 +1,22 @@
+* HELLO WORLD demo for minimal console-only GNU MDK
+* Load each word directly into A, inspect with 'preg A'
+
+        ORIG    1000
+
+WORD0   ALF     HELLO
+WORD1   ALF     , WOR
+WORD2   ALF     LD
+ENDMSG  CON     0
+
+        ORIG    1100
+START   LDA     WORD0     * load first word
+        NOP                  * inspect A
+        LDA     WORD1     * load second word
+        NOP                  * inspect A
+        LDA     WORD2     * load third word
+        NOP                  * inspect A
+        LDA     ENDMSG    * load end marker
+        NOP                  * inspect A
+        HLT
+
+        END     START

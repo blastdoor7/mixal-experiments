@@ -1,0 +1,9 @@
+* Demonstrate CHAR output in memory
+
+        ORIG    1000
+START   ENTA    0           * set index
+        CHAR                * convert A register to characters
+        HLT
+
+A       CON     1234567890  * number to convert
+        END     START

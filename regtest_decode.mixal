@@ -1,0 +1,25 @@
+* Decode HELLO WORLD in console-only MDK
+* Inspect register A to see words
+* Use I1 as index register
+
+        ORIG    1000
+
+* Message words
+MSG     ALF     HELLO
+        ALF     , WOR
+        ALF     LD
+MSGEND  CON     0
+
+        ORIG    1100
+START   ENTA    0        * initialize A to 0
+        ENT1    0        * use I1 as memory index
+
+NEXT    LDA     MSG,I1    * load word MSG+I1 into A
+        CMPA    MSGEND     * compare with end marker
+        JE      DONE       * if end, halt
+        NOP                  * placeholder, inspect A with 'preg A'
+        ENT1    I1+1       * increment index register
+        JMP     NEXT
+DONE    HLT
+
+        END     START

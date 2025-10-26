@@ -1,0 +1,12 @@
+* HELLO WORLD TEST
+
+TERM    EQU     19          * terminal device number
+        ORIG    1000        * program start address
+
+START   OUT     MSG,TERM    * output the message
+        HLT                 * stop
+
+MSG     ALF     HELLO
+        ALF     , WOR
+        ALF     LD
+        END     START
