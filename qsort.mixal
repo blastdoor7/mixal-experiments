@@ -1,3 +1,7 @@
+N     EQU    10
+INPUT EQU   100
+M     EQU     9 
+STACK EQU  1000 
 A     EQU   2:3
 B     EQU   4:5
       ORIG 3000
@@ -13,7 +17,7 @@ START ENT6    0
       MOVE INPUT,5
       STX INPUT,5
 3H    INC4 
-10H   CMPA INPUT,4
+0H    CMPA INPUT,4
       JG 3B
 4H    DEC5 1
       CMPA INPUT,5
