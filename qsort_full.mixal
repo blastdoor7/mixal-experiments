@@ -1,13 +1,14 @@
 * -----------------------------
 * Constants / memory
 * -----------------------------
-N       EQU 9
-M       EQU 1
+N       EQU 20
+M       EQU 10
 STACK   EQU 1000
 
 * Sample input array at address 100
         ORIG 100
-INPUT   CON 6
+INPUT   CON 0
+        CON 6
         CON 1
         CON 5
         CON 3
@@ -16,6 +17,17 @@ INPUT   CON 6
         CON 7
         CON 4
         CON 9
+        CON 20
+        CON 19
+        CON 18
+        CON 17
+        CON 16
+        CON 15
+        CON 14
+        CON 13
+        CON 12
+        CON 11
+        CON 10
 
 * Allocate stack space (no label!)
         ORIG STACK
@@ -105,6 +117,7 @@ QSSUB	ENT6 0  * L 01
 5H 	STA INPUT+1,4 * L 61
 6H 	INC5 1  * L 62
 	J5NP 2B  * L 63
+
         JMP HALTPT
 
 * -----------------------------
