@@ -1,3 +1,21 @@
+* ============================================================
+*  File: taocp_v3p117_quicksort.mixal
+*  Title: Algorithm Q — Quicksort (Knuth, TAOCP Vol. III, §5.2.2)
+*
+*  Source: Donald E. Knuth, "The Art of Computer Programming"
+*          Volume 3: Sorting and Searching, 1st ed. (1973), p.117
+*
+*  Description:
+*    Faithful MIXAL transcription of Algorithm Q (Quicksort),
+*    tested and verified to run correctly under mdk.
+*    Sorting is done in place on the array beginning at address 100.
+*
+*  Adaptation Notes:
+*    - Stack and input initialized explicitly for test run.
+*    - Halt point added after completion.
+*
+*  Date: 2025-11-02
+* ============================================================
 * -----------------------------
 * Constants / memory
 * -----------------------------
